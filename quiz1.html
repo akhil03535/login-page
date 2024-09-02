@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz Page</title>
+</head>
+<body>
+    <h1>Welcome, <?php echo htmlspecialchars($_GET['name']); ?></h1>
+    <form action="submit_quiz.php" method="post">
+        <!-- Add your quiz questions here -->
+        Question 1: <input type="text" name="q1"><br>
+        Question 2: <input type="text" name="q2"><br>
+        <!-- Add more questions as needed -->
+        <input type="hidden" name="name" value="<?php echo htmlspecialchars($_GET['name']); ?>">
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
